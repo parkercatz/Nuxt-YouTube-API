@@ -1,5 +1,8 @@
 import colors from 'vuetify/es5/util/colors'
 
+require('dotenv').config()
+const { YOUTUBE_API_KEY } = process.env
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -57,4 +60,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  env: {
+    YOUTUBE_API_KEY,
+  },
 }
